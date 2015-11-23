@@ -1,0 +1,12 @@
+root@AmbassadorHost:~# cat docker-compose.yml 
+redis:
+    image: crosbymichael/redis
+    container_name: redis-ravneet
+
+redis_ambassador:
+    image: svendowideit/ambassador
+    container_name: redis-ravneet-ambassador
+    links:
+        - redis
+    ports:
+        - "6379:6379"
