@@ -24,3 +24,4 @@ Run the following command to run the redis-cli and access the server.
 A git commit and push is done on the host git repo which results in building a new image and running container on blue or green host depending upon the remote we are pushing the changes to.
 Before building a new image the previous container and image is removed. The new build is used to run a new container. The image is pushed to private registery.
 The application is deployed on the newly built container.
+All the steps are followed as in Deployment wrokshop with additional docker configuration in post-receive hook.
