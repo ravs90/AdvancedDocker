@@ -1,0 +1,6 @@
+#!/bin/sh
+docker build -t blue-app .
+echo 'tagging'
+docker tag -f blue-app localhost:5000/blue:latest
+echo 'push to registery'
+docker push localhost:5000/blue:latest

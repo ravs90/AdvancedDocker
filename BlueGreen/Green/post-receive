@@ -1,0 +1,9 @@
+#!/bin/sh
+WDIR=/home/ravneet/Ravneet/DevOps/Deployment/deploy/green-www/
+GIT_WORK_TREE=/home/ravneet/Ravneet/DevOps/Deployment/deploy/green-www/ git checkout -f
+cd $WDIR
+docker pull localhost:5000/green:latest  
+docker stop green  
+docker rm green
+docker run -p 9000:8080 -d --name green green-app
+

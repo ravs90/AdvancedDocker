@@ -1,0 +1,9 @@
+#!/bin/sh
+WDIR=/home/ravneet/Ravneet/DevOps/Deployment/deploy/blue-www/
+GIT_WORK_TREE=/home/ravneet/Ravneet/DevOps/Deployment/deploy/blue-www/ git checkout -f
+cd $WDIR
+docker pull localhost:5000/blue:latest  
+docker stop blue  
+docker rm blue
+docker run -p 9000:8080 -d --name blue blue-app
+

@@ -1,0 +1,9 @@
+#!/bin/sh
+WDIR=/home/ravneet/Ravneet/DevOps/Deployment/deploy/green-www/
+GIT_WORK_TREE=/home/ravneet/Ravneet/DevOps/Deployment/deploy/green-www/ git checkout -f
+cd $WDIR
+docker build -t green-app .
+echo 'tagging'
+docker tag -f green-app localhost:5000/green:latest
+echo 'push to registery'
+docker push localhost:5000/green:latest
