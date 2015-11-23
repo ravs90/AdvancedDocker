@@ -9,9 +9,14 @@
     In this task, I have used two Digital Ocean droplets, each having 2 containers. One container acts as a ambassador and the other acts a redis server and client respectively.
 The containers are configured using ambassador pattern so that they can communicate with each other.
 Run the following command to run the redis-cli and access the server.
-  ```
-  docker run -i -t --rm --link redis_ambassador:redis relateiq/redis-cli
-  ```
+    1.  Install docker and docker-compose on both the droplets. 
+    2.  Create a docker-compose.yml file containing all the redis server and ambassador setup details. Do similar for client host.
+    3.  Run ``` docker-compose up``` on both client and host. 
+    4.  Create a connection between client and host by creating a redis-cli and try to communicate with server.
+        ```
+          docker run -i -t --rm --link redis_ambassador:redis relateiq/redis-cli
+        ```
+    5.  SET some key value on redis-cli, which will be set at redis-server(Server Host).
   
 3.  Docker Deploy
     
