@@ -25,3 +25,8 @@ A git commit and push is done on the host git repo which results in building a n
 Before building a new image the previous container and image is removed. The new build is used to run a new container. The image is pushed to private registery.
 The application is deployed on the newly built container.
 All the steps are followed as in Deployment wrokshop with additional docker configuration in post-receive hook.
+
+    Screencast link:
+    ```
+    https://github.com/ravnee/AdvancedDocker/blob/master/BlueGreen/blueGreenScreenCast.mp4
+    ```
