@@ -18,6 +18,10 @@ Run the following command to run the redis-cli and access the server.
         ```
     5.  SET some key value on redis-cli, which will be set at redis-server(Server Host).
   
+  Screencast link:
+  ```
+  https://github.com/ravnee/AdvancedDocker/blob/master/Ambassador%20Pattern/Screencast.mp4
+  ```
 3.  Docker Deploy
     
     For this task, I have a git repository on a host and have set two remotes blue and green for it. 
