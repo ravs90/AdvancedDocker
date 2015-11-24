@@ -11,6 +11,10 @@
     5.  Access filecontainer:9000 using curl frm inside linkedcontainer.
         ``` curl filecontainer:9000 ```
     
+    Screencast Link:
+    ```
+    https://github.com/ravnee/AdvancedDocker/blob/master/FileIO/screencast.mp4
+    ```
     
 2.  Ambassador pattern
     
