@@ -5,7 +5,14 @@
     In this task, I have used a Digital Ocean droplet. 
     1.  Created a container 'fileioContainer' using the Dockerfile.
     2.  Build and run the 'fileiocontainer'.
+        ```
+        sudo docker build -t fileiocontainer .
+        sudo docker run -d --name fileiocontainer fileiocontainer
+        ```
     3.  Run one more linkedcontainer using ubuntu:14.04 image and link to 'fileiocontainer'.
+        ```
+        sudo docker run --link fileiocontainer:fileiocontainer --rm -it --name linkedcontainer ubuntu:14.04
+        ```
     4.  After running the linkedcontainer, install curl inside the container.
         ``` apt-get install curl ```
     5.  Access filecontainer:9000 using curl frm inside linkedcontainer.
