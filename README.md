@@ -18,6 +18,10 @@ Run the following command to run the redis-cli and access the server.
         ```
     5.  SET some key value on redis-cli, which will be set at redis-server(Server Host).
   
+  Screencast link:
+  ```
+  https://github.com/ravnee/AdvancedDocker/blob/master/Ambassador%20Pattern/Screencast.mp4
+  ```
 3.  Docker Deploy
     
     For this task, I have a git repository on a host and have set two remotes blue and green for it. 
@@ -25,3 +29,8 @@ A git commit and push is done on the host git repo which results in building a n
 Before building a new image the previous container and image is removed. The new build is used to run a new container. The image is pushed to private registery.
 The application is deployed on the newly built container.
 All the steps are followed as in Deployment wrokshop with additional docker configuration in post-receive hook.
+
+    Screencast link:
+    ```
+    https://github.com/ravnee/AdvancedDocker/blob/master/BlueGreen/blueGreenScreenCast.mp4
+    ```
